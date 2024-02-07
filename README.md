@@ -10,7 +10,11 @@ Run ChaCha as Prototype (https://github.com/naver-ai/chacha-chatbot)
 
 ## Plans
 - **Key Motivation**: Build a chatbot that can improve children’s skills in science. (e.g. Math, Bio)
-- **Technical Rodamap**: Collect Conversational Dataset from Children Teaching -> RAG, Different Model Capacities
+
+- **Technical Rodamap**: 
+1. Collect Conversational Dataset from Children Teaching -> RAG
+2. Different Model Capacities
+3. Alig with Children
 
 
 ## Evaluation
