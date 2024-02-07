@@ -16,9 +16,16 @@ Run ChaCha as Prototype (https://github.com/naver-ai/chacha-chatbot)
 2. Different Model Capacities
 3. Alig with Children
 
+- **Potential Contribution**:
+1. Collect the dataset
+2. If the quantity of data is small, can consider building a benchmark
+3. Function for aligning with different groups' mind/cognition.
+4. Pipeline for Children/Teenage STEM education with LLMs.
 
 ## Evaluation
 User Study -> can refer to ChaCha
+
+
 
 ## Related Papers
 1. GLOBEM Dataset: Multi-Year Datasets for Longitudinal
