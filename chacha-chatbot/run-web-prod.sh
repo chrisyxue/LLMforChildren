@@ -1,0 +1,1 @@
+(cd frontend && npm install && npm run build && cd ..) && (pm2 delete chacha-chatbot ; pm2 start pm2.config.js)

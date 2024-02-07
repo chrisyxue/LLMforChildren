@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: NanumSquareRound, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply text-gray-700 text-base font-semibold;
+}
+html, body{
+    height: 100vh;
+}
+
+.background-panel {
+    @apply bg-background;
+    /*background: linear-gradient(121deg, rgb(233, 235, 237) 0%, rgb(214, 241, 232) 100%);*/
+}
+
+.introViewChat {
+    @apply bg-white px-5 py-7 rounded-2xl;
+}
+
+@layer components {
+
+    #app{
+        @apply absolute left-0 right-0 bottom-0 top-0 inset-0 overflow-hidden;
+    }
+
+    .text-input, input[type=text], input[type=number], textarea {
+        @apply shadow-inner border-2 bg-white px-2 py-1 rounded-md border-slate-200 disabled:text-gray-400 focus:outline-none focus:border-clova-blue;
+    }
+
+
+
+    .intro-form-frame .panel {
+        @apply flex flex-col justify-stretch my-auto mx-auto w-72 introViewChat;
+    }
+    .intro-form-frame form {
+        @apply flex flex-col justify-stretch;
+    }
+
+    textarea.chat-type {
+        @apply resize-none
+    }
+
+    .button-main{
+        @apply bg-gradient-to-r from-indigo-800/[0.8] to-blue-600/[0.7] p-3 py-1.5 rounded-md text-white shadow-md cursor-pointer hover:opacity-90 active:ring active:ring-clova-blue/50 disabled:opacity-50;
+    }
+
+    .button-clear{
+        @apply bg-transparent text-gray-700;
+    }
+
+    .button-outline{
+        @apply button-clear border-slate-400 border-[1px];
+    }
+
+    .button-tiny{
+        @apply px-1.5 py-0.5 hover:bg-slate-500/20 rounded-md text-sm font-bold;
+    }
+
+    .button-with-icon{
+        @apply flex items-center;
+    }
+
+    .turn-list-container{
+        @apply snap-y sm:scroll-pb-[100px]
+    }
+
+    .turn-list{
+        @apply sm:mb-[100px]
+    }
+
+    .turn-container {
+        @apply -mx-2 px-2 py-3 sm:py-4 flex flex-col scroll-m-2 snap-end;
+    }
+
+    .turn-container .callout {
+        @apply rounded-lg sm:rounded-xl px-3 py-2 sm:px-6 sm:py-3 shadow-md max-w-xl text-gray-600 font-normal leading-relaxed;
+
+    }
+
+    .turn-container .callout > em{
+        @apply not-italic font-extrabold;
+    }
+
+    .turn-container.system {
+        @apply items-start pl-2;
+        position: relative;
+    }
+
+    .turn-container.system.last-system-message {
+        @apply flex-row items-end justify-start;
+    }
+
+    .turn-container.system .callout {
+        @apply rounded-tl-none text-black bg-slate-50 ml-12 -mt-4;
+    }
+
+    .turn-container.user {
+        @apply items-end;
+    }
+
+    .turn-container.user .callout {
+        @apply  whitespace-break-spaces text-white bg-indigo-800/[.8] mr-12 -mt-4 rounded-tr-none border-[1px];
+    }
+
+    .profilePic {
+        @apply shadow-lg rounded-full ring-1 ring-slate-400;
+    }
+
+    .turn-container.system > .profilePic {
+        @apply ring-4 ring-indigo-500/[0.5];
+    }
+
+    .introViewChat {
+        @apply  -mt-0.5 !important;
+    }
+
+    .chachaContainer {
+        @apply h-auto w-24 pb-0 -mb-14 !important;
+    }
+
+    .chachaTextBox {
+        @apply mx-auto my-auto;
+    }
+
+    .chachaTextBox > span {
+        @apply -ml-8 my-auto text-5xl;
+        color: #9FA1D0;
+        font-family: Bradley Hand;
+    }
+}
+
+a {
+  @apply text-blue-600 font-semibold;
+}
+
+.emolist {
+    @apply sticky mt-5 aria-disabled:pointer-events-none mx-10;
+}
+
+.emolist > .emotion {
+    @apply mx-1 my-3 inline-block relative;
+}
+
+.emotion > input + label {
+    @apply h-auto py-2 cursor-pointer disabled:cursor-default;
+}
+
+.emotion > input:checked + label, .emotion.view-only[aria-selected=true] {
+    @apply border-clova-blue font-bold bg-cyan-100 shadow-inner cursor-pointer disabled:cursor-default;
+}
+
+.emotion > input {
+    @apply absolute opacity-0;
+}
+
+.emotion > label, .emotion.view-only {
+    @apply rounded-lg text-slate-500 font-medium border-slate-300 hover:bg-slate-200 border px-2 py-1 drop-shadow-sm bg-slate-100 aria-disabled:pointer-events-none;
+}
+
+#submitEmotion {
+    @apply inline-block rounded-lg font-bold mx-1 my-4 px-4 py-1 shadow-lg text-lg;
+}
+
+diary {
+    @apply bg-[#e1e4d2] block my-2 px-1.5 py-1 italic rounded-lg leading-loose;
+}

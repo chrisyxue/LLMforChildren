@@ -20,3 +20,9 @@ Run ChaCha as Prototype (https://github.com/naver-ai/chacha-chatbot)
 ## Evaluation
 User Study -> can refer to ChaCha
 
+## Related Papers
+1. GLOBEM Dataset: Multi-Year Datasets for Longitudinal
+Human Behavior Modeling Generalization (https://arxiv.org/pdf/2211.02733v2.pdf).
+
+2. ChaCha: Leveraging Large Language Models to Prompt Children to Share Their Emotions about Personal Events (https://arxiv.org/pdf/2309.12244v3.pdf) (https://github.com/naver-ai/chacha-chatbot)
+

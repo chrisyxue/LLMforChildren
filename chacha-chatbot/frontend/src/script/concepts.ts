@@ -1,0 +1,1 @@
+export const EMOTION_LIST: Array<{en: string, kr: string, emoji: string}> = require('../../../app/emotions.json')
